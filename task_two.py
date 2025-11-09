@@ -72,7 +72,7 @@ if eat_input == "1":
             print("Введите целое число!")
     bee_elefant.eat("nectar", value)
 
-if eat_input == "2":
+elif eat_input == "2":
     while True:
         value = input("Введите количество съеденного: ")
         if value.isdigit():

@@ -94,8 +94,8 @@ while True:
 
 
     if user_input == "1":
-        index = input("Введите индекс товара: ")
         while True:
+            index = input("Введите индекс товара: ")
             if index.isdigit():
                 index = int(index)
                 break
@@ -111,7 +111,7 @@ while True:
         else:
             print("Товар не найден")
 
-    if user_input == "2":
+    elif user_input == "2":
         foud_by_name = input("Введите название товара: ")
         found_product_by_name = storage.get_product_by_name(foud_by_name)
         if found_product_by_name:
@@ -123,17 +123,17 @@ while True:
         else:
             print("Товар не найден")
 
-    if user_input == "3":
+    elif user_input == "3":
         print("\nСортировка по названию товара")
         storage.sort_by_name()
         storage.display_products()
 
-    if user_input == "4":
+    elif user_input == "4":
         print("\nСортировка по названию магазина")
         storage.sort_by_shop_name()
         storage.display_products()
 
-    if user_input == "5":
+    elif user_input == "5":
         print("\nСортировка по цене (по возрастанию)")
         storage.sort_by_price()
         storage.display_products()
@@ -142,11 +142,14 @@ while True:
         storage.sort_by_reverse_price()
         storage.display_products()
 
-    if user_input == "6":
+    elif user_input == "6":
         result_one = product_one + product_two
         result_two = product_three + product_four
         result = result_one + result_two
         print(f"Сумма цен всех товаров {result} руб.")
 
-    if user_input == "7":
+    elif user_input == "7":
         break
+
+    else:
+        print("Неверный ввод! Выберите пункт из меню программы!")
